@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*#[ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/pi/Dev/HCSR04/src/SonarHCSR04.cpp
+iostream
+-
+wiringPi.h
+-
+SonarHCSR04.h
+/home/pi/Dev/HCSR04/src/SonarHCSR04.h
+bitset
+-
+
+/home/pi/Dev/HCSR04/src/SonarHCSR04.h
+bitset
+-
+
+/home/pi/Dev/HCSR04/src/main.cpp
+iostream
+-
+wiringPi.h
+-
+SonarHCSR04.h
+/home/pi/Dev/HCSR04/src/SonarHCSR04.h
+

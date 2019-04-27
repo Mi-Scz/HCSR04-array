@@ -1,0 +1,3 @@
+/home/pi/Dev/HCSR04/CMakeFiles/rebuild_cache.dir
+/home/pi/Dev/HCSR04/CMakeFiles/edit_cache.dir
+/home/pi/Dev/HCSR04/CMakeFiles/HCSR04.dir
