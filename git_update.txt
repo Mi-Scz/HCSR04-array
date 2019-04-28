@@ -1,0 +1,6 @@
+after some changes:
+
+git status
+git add .
+git commit -m "text what has been changed"
+git push origin master
