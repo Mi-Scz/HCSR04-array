@@ -2,6 +2,7 @@
 #include <stdarg.h>
 #include <wiringPi.h>
 #include <bitset>
+#include <stdio.h>
 
 #include "HCSR04_array.h"
 
@@ -39,10 +40,27 @@ int HCSR04_array::get_sensor_nmb()
     return sensor_nmb;
 }
 
-
-double HCSR04_array::data_one(int i)
+void HCSR04_array::select_sensor(int i)
 {
-    delay(10);
+    bin_set = std::bitset<3>(i);
+    digitalWrite(pin_ch_A, bin_set[0]);
+    digitalWrite(pin_ch_B, bin_set[1]);
+    digitalWrite(pin_ch_C, bin_set[2]);
+}
+
+void HCSR04_array::recordPulseLength()
+{
+    startTimeUsec = micros();
+    while ( digitalRead(echo) == HIGH );
+    endTimeUsec = micros();
+}
+
+
+float HCSR04_array::data(int i)
+{
+    delay(5);
+    select_sensor(i);
+    delay(5);
 
     digitalWrite(trigger, HIGH);
     delayMicroseconds(10);
@@ -67,29 +85,31 @@ double HCSR04_array::data_one(int i)
     }
 }
 
-double* HCSR04_array::data_one(int i)
+float* HCSR04_array::data()
 {
 
-    static float data[sensor_nmb];
+    static float dist_data[8];
+
+    for (int i = 0; i < sensor_nmb; i++){
+    dist_data[i] = data(i);
+    }
+
+    return dist_data;
 
 }
 
 
-void HCSR04_array::select_sensor(int i)
+void HCSR04_array::print_data()
 {
-    bin_set = std::bitset<3>(i);
-    digitalWrite(pin_ch_A, bin_set[0]);
-    digitalWrite(pin_ch_B, bin_set[1]);
-    digitalWrite(pin_ch_C, bin_set[2]);
+
+    for (int i = 0; i < sensor_nmb; i++){
+    printf ("%6d : %1.2f  ", i , data(i));
+    }
+    printf ("\n");
+
 }
 
 
-void HCSR04_array::recordPulseLength()
-{
-    startTimeUsec = micros();
-    while ( digitalRead(echo) == HIGH );
-    endTimeUsec = micros();
-}
 
 
 

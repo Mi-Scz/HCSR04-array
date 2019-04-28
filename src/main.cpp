@@ -1,6 +1,6 @@
 #include <iostream>
 #include <wiringPi.h>
-#include "SonarHCSR04.h"
+#include "HCSR04_array.h"
 
 
 
@@ -12,11 +12,10 @@ int main()
     if (wiringPiSetup() == -1)
         return -1;
 
-    SonarHCSR04 sonar;
-    sonar.select_sensor(0);
+    HCSR04_array sonar_array;
 
 
     while(1){
-        cout << "Distance is " << sonar.distance() << " m." << endl;
+        sonar_array.print_data();
     }
 }

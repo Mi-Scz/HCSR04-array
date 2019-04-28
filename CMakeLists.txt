@@ -7,5 +7,5 @@ set (source_dir "${PROJECT_SOURCE_DIR}/src/")
 
 file (GLOB source_files "${source_dir}/*.cpp")
 
-add_executable (HCSR04 ${source_files})
-target_link_libraries(HCSR04 wiringPi) 
+add_executable (HCSR04_array ${source_files})
+target_link_libraries(HCSR04_array wiringPi)

@@ -8,9 +8,10 @@ class HCSR04_array
 {
     public:
         HCSR04_array();
-        double data_all();
-        double data_one(int i);
+        float* data();
+        float data(int i);
         int get_sensor_nmb();
+        void print_data();
 
     protected:
 

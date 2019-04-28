@@ -1,1 +1,0 @@
-/usr/bin/c++    -Wall -Werror -std=c++14 -g   CMakeFiles/HCSR04.dir/src/SonarHCSR04.cpp.o CMakeFiles/HCSR04.dir/src/main.cpp.o  -o HCSR04 -lwiringPi 

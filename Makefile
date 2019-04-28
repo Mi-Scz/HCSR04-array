@@ -111,17 +111,44 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named HCSR04
+# Target rules for targets named HCSR04_array
 
 # Build rule for target.
-HCSR04: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 HCSR04
-.PHONY : HCSR04
+HCSR04_array: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 HCSR04_array
+.PHONY : HCSR04_array
 
 # fast build rule for target.
-HCSR04/fast:
-	$(MAKE) -f CMakeFiles/HCSR04.dir/build.make CMakeFiles/HCSR04.dir/build
-.PHONY : HCSR04/fast
+HCSR04_array/fast:
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/build
+.PHONY : HCSR04_array/fast
+
+src/HCSR04_array.o: src/HCSR04_array.cpp.o
+
+.PHONY : src/HCSR04_array.o
+
+# target to build an object file
+src/HCSR04_array.cpp.o:
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/src/HCSR04_array.cpp.o
+.PHONY : src/HCSR04_array.cpp.o
+
+src/HCSR04_array.i: src/HCSR04_array.cpp.i
+
+.PHONY : src/HCSR04_array.i
+
+# target to preprocess a source file
+src/HCSR04_array.cpp.i:
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/src/HCSR04_array.cpp.i
+.PHONY : src/HCSR04_array.cpp.i
+
+src/HCSR04_array.s: src/HCSR04_array.cpp.s
+
+.PHONY : src/HCSR04_array.s
+
+# target to generate assembly for a file
+src/HCSR04_array.cpp.s:
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/src/HCSR04_array.cpp.s
+.PHONY : src/HCSR04_array.cpp.s
 
 src/SonarHCSR04.o: src/SonarHCSR04.cpp.o
 
@@ -129,7 +156,7 @@ src/SonarHCSR04.o: src/SonarHCSR04.cpp.o
 
 # target to build an object file
 src/SonarHCSR04.cpp.o:
-	$(MAKE) -f CMakeFiles/HCSR04.dir/build.make CMakeFiles/HCSR04.dir/src/SonarHCSR04.cpp.o
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/src/SonarHCSR04.cpp.o
 .PHONY : src/SonarHCSR04.cpp.o
 
 src/SonarHCSR04.i: src/SonarHCSR04.cpp.i
@@ -138,7 +165,7 @@ src/SonarHCSR04.i: src/SonarHCSR04.cpp.i
 
 # target to preprocess a source file
 src/SonarHCSR04.cpp.i:
-	$(MAKE) -f CMakeFiles/HCSR04.dir/build.make CMakeFiles/HCSR04.dir/src/SonarHCSR04.cpp.i
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/src/SonarHCSR04.cpp.i
 .PHONY : src/SonarHCSR04.cpp.i
 
 src/SonarHCSR04.s: src/SonarHCSR04.cpp.s
@@ -147,7 +174,7 @@ src/SonarHCSR04.s: src/SonarHCSR04.cpp.s
 
 # target to generate assembly for a file
 src/SonarHCSR04.cpp.s:
-	$(MAKE) -f CMakeFiles/HCSR04.dir/build.make CMakeFiles/HCSR04.dir/src/SonarHCSR04.cpp.s
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/src/SonarHCSR04.cpp.s
 .PHONY : src/SonarHCSR04.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -156,7 +183,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) -f CMakeFiles/HCSR04.dir/build.make CMakeFiles/HCSR04.dir/src/main.cpp.o
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -165,7 +192,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) -f CMakeFiles/HCSR04.dir/build.make CMakeFiles/HCSR04.dir/src/main.cpp.i
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -174,7 +201,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) -f CMakeFiles/HCSR04.dir/build.make CMakeFiles/HCSR04.dir/src/main.cpp.s
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -185,7 +212,10 @@ help:
 	@echo "... depend"
 	@echo "... rebuild_cache"
 	@echo "... edit_cache"
-	@echo "... HCSR04"
+	@echo "... HCSR04_array"
+	@echo "... src/HCSR04_array.o"
+	@echo "... src/HCSR04_array.i"
+	@echo "... src/HCSR04_array.s"
 	@echo "... src/SonarHCSR04.o"
 	@echo "... src/SonarHCSR04.i"
 	@echo "... src/SonarHCSR04.s"

@@ -6,6 +6,24 @@
 
 #IncludeRegexTransform: 
 
+/home/pi/Dev/HCSR04/src/HCSR04_array.cpp
+iostream
+-
+stdarg.h
+-
+wiringPi.h
+-
+bitset
+-
+stdio.h
+-
+HCSR04_array.h
+/home/pi/Dev/HCSR04/src/HCSR04_array.h
+
+/home/pi/Dev/HCSR04/src/HCSR04_array.h
+bitset
+-
+
 /home/pi/Dev/HCSR04/src/SonarHCSR04.cpp
 iostream
 -
@@ -25,6 +43,6 @@ iostream
 -
 wiringPi.h
 -
-SonarHCSR04.h
-/home/pi/Dev/HCSR04/src/SonarHCSR04.h
+HCSR04_array.h
+/home/pi/Dev/HCSR04/src/HCSR04_array.h
 

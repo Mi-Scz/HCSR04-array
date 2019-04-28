@@ -60,39 +60,39 @@ CMAKE_SOURCE_DIR = /home/pi/Dev/HCSR04
 CMAKE_BINARY_DIR = /home/pi/Dev/HCSR04
 
 #=============================================================================
-# Target rules for target CMakeFiles/HCSR04.dir
+# Target rules for target CMakeFiles/HCSR04_array.dir
 
 # All Build rule for target.
-CMakeFiles/HCSR04.dir/all:
-	$(MAKE) -f CMakeFiles/HCSR04.dir/build.make CMakeFiles/HCSR04.dir/depend
-	$(MAKE) -f CMakeFiles/HCSR04.dir/build.make CMakeFiles/HCSR04.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Dev/HCSR04/CMakeFiles --progress-num=1,2,3 "Built target HCSR04"
-.PHONY : CMakeFiles/HCSR04.dir/all
+CMakeFiles/HCSR04_array.dir/all:
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/depend
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/pi/Dev/HCSR04/CMakeFiles --progress-num=1,2,3,4 "Built target HCSR04_array"
+.PHONY : CMakeFiles/HCSR04_array.dir/all
 
 # Include target in all.
-all: CMakeFiles/HCSR04.dir/all
+all: CMakeFiles/HCSR04_array.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/HCSR04.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Dev/HCSR04/CMakeFiles 3
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/HCSR04.dir/all
+CMakeFiles/HCSR04_array.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Dev/HCSR04/CMakeFiles 4
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/HCSR04_array.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/pi/Dev/HCSR04/CMakeFiles 0
-.PHONY : CMakeFiles/HCSR04.dir/rule
+.PHONY : CMakeFiles/HCSR04_array.dir/rule
 
 # Convenience name for target.
-HCSR04: CMakeFiles/HCSR04.dir/rule
+HCSR04_array: CMakeFiles/HCSR04_array.dir/rule
 
-.PHONY : HCSR04
-
-# clean rule for target.
-CMakeFiles/HCSR04.dir/clean:
-	$(MAKE) -f CMakeFiles/HCSR04.dir/build.make CMakeFiles/HCSR04.dir/clean
-.PHONY : CMakeFiles/HCSR04.dir/clean
+.PHONY : HCSR04_array
 
 # clean rule for target.
-clean: CMakeFiles/HCSR04.dir/clean
+CMakeFiles/HCSR04_array.dir/clean:
+	$(MAKE) -f CMakeFiles/HCSR04_array.dir/build.make CMakeFiles/HCSR04_array.dir/clean
+.PHONY : CMakeFiles/HCSR04_array.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/HCSR04_array.dir/clean
 
 .PHONY : clean
 
